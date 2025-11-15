@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./imagens/logotipo.png">
+</head>
+
+<body>
+    <aside class="p-4">
+        <div class="d-flex">
+            <img src="./imagens/logotipo.png" width="50" height="50" alt="" class="ms-auto">
+            <img src="./imagens/escrita.png" width="150" height="50" alt="" class="me-auto">
+        </div>
+
+        <div class="d-flex justify-content-center mt-lg-4">
+            <ul class="list-unstyled lista-aside">
+                <li class="p-2">
+                    <h3>Página inicial</h3>
+                </li>
+                <li class="p-2">
+                    <h3>Notificações</h3>
+                </li>
+                <li class="p-2">
+                    <h3>Explorar</h3>
+                </li>
+                <li class="p-2">
+                    <h3>Mensagens</h3>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <header>
+        <nav>
+            <div class="container text-white">
+                <div class="row p-2">
+                    <div class="col-6">
+                        <h5 class="fw-bold">Ronald Weasley</h5>
+                        <span>rony_weasley</span>
+                    </div>
+                    <div class="col-6 col-lg-6 d-flex justify-content-end align-items-center gap-2">
+                        <a href="./Página Login/index.html" class="btn btn-outline-light btn-sm"
+                            id="btnEntrar">Entrar</a>
+                        <a href="./Página Cadastro/index.html" class="btn btn-light btn-sm"
+                            id="btnCadastrar">Cadastrar</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-5 col-6 ms-auto mt-auto mb-auto div-foto-perfil">
+                    <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid foto-perfil rounded-circle">
+                </div>
+                <div class="col-lg-5 col-5 me-auto">
+                    <h3>rony_weasley</h3>
+                    <h5 class="mb-lg-1">Ronald Weasley</h5>
+
+                    <div class="d-flex gap-2">
+                        <span><span class="fw-bold">45</span> posts</span>
+                        <span><span class="fw-bold" id="seguidores">346</span> seguidores</span>
+                        <span><span class="fw-bold" id="seguindo">238</span> seguindo</span>
+                    </div>
+
+                    <p class="mt-3">
+                        Grifinória 🦁<br>
+                        Goleiro Quadribol 🏈<br>
+                        🪄
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-lg-3">
+                <button class="col-lg-6 col-7 p-2 seguir" id="btnSeguir">Seguir</button>
+                <button onclick="exibirSugestoes()" class="col-lg-1 col-sm-3 col-2 ms-1" id="btnSugestao">
+                    <i class="bi bi-person-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <section class="sugestoesOcultas p-5" id="sugestoes">
+            <div class="px-5">
+
+                <h5 class="fw-bold text-center">Sugestões para você</h5>
+                <div class="row gap-2 justify-content-center">
+                    <article class="col-5 col-sm-3 col-md-3 col-lg-3 text-center pessoa-sugestao p-4 rounded">
+                        <div class="col-7 ms-auto me-auto">
+                            <img src="./imagens/Hermione.jpg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <span class="fw-bold">granger</span>
+                        <br>
+                        <span>Hermione Granger</span>
+                        <hr>
+                        <button class="fw-bold btnSeguirSugestao">Seguindo</button>
+                    </article>
+
+                    <article
+                        class="col-5 col-sm-3 col-md-3 col-lg-3 text-center pessoa-sugestao p-4 rounded bg-black text-white">
+                        <span class="fw-bold">EM MEMÓRIA</span>
+                        <div class="col-7 ms-auto me-auto">
+                            <img src="./imagens/Fred.jpg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <span class="fw-bold">frd_weasley</span>
+                        <p><span>Fred Weasley</span></p>
+                        <hr>
+                        <button class="fw-bold btnSeguirSugestao">Seguindo</button>
+                    </article>
+
+                    <article class="col-5 col-sm-3 col-md-3 col-lg-3 text-center pessoa-sugestao p-4 rounded">
+                        <div class="col-7 ms-auto me-auto">
+                            <img src="./imagens/Harry.jpg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <span class="fw-bold">harry_ptt</span>
+                        <i class="bi bi-patch-check-fill text-primary"></i>
+                        <p><span>Harry Potter</span></p>
+                        <hr>
+                        <button class="fw-bold btnSeguirSugestao">Seguindo</button>
+                    </article>
+                    <article class="col-5 col-sm-3 col-md-3 col-lg-3 text-center pessoa-sugestao p-4 rounded">
+                        <div class="col-7 ms-auto me-auto">
+                            <img src="./imagens/Fleur.jpg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <span class="fw-bold">fdelacour</span>
+                        <i class="bi bi-patch-check-fill text-primary"></i>
+                        <p><span>Fleur Delacour</span></p>
+                        <hr>
+                        <button class="fw-bold btnSeguirSugestao">Seguindo</button>
+                    </article>
+
+                    <article class="col-5 col-sm-3 col-md-3 col-lg-3 text-center pessoa-sugestao p-4 rounded">
+                        <div class="col-7 ms-auto me-auto">
+                            <img src="./imagens/Snape.jpeg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <span class="fw-bold">severo_s</span>
+                        <p><span>Severo Snape</span></p>
+                        <hr>
+                        <button class="fw-bold btnSeguirSugestao">Seguir</button>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <div class="container px-5">
+            <section id="carrossel" class="mt-5">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="./imagens/rony-1filme.jpg" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                                <div class="col-4">
+                                    <img src="./imagens/rony_2filme.png" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                                <div class="col-4">
+                                    <img src="./imagens/rony_3filme.png" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="./imagens/rony_4filme.jpg" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                                <div class="col-4">
+                                    <img src="./imagens/rony_5filme.png" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                                <div class="col-4">
+                                    <img src="./imagens/rony_6filme.png" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="./imagens/rony_filme7.jpg" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                                <div class="col-4">
+                                    <img src="./imagens/rony_filme8.png" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                                <div class="col-4">
+                                    <img src="./imagens/rony_8filme.png" class="d-block w-100 img-fluid imgCarrossel"
+                                        alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <hr>
+    </header>
+
+    <main class="p-5">
+        <section id="publicar">
+            <div class="container">
+                <div class="col-lg-9 ms-auto me-auto bg-white div-publicar">
+                    <div class="row p-2">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-9">
+                            <input type="text" placeholder="No que você está pensando?" class="w-100"
+                                id="inputPublicacao">
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-sm-2 col-2">
+                            <button id="btnPublicar" class="text-white btn-publicar">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 ms-auto me-auto mt-3 bg-white div-publicar">
+                    <div class="row p-2">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-9">
+                            <input type="text" placeholder="Link para foto" class="w-100" id="inputPublicacaoFoto">
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-sm-2 col-2">
+                            <button id="btnPublicarFoto" class="text-white btn-publicar">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 ms-auto me-auto mt-3 bg-white div-publicar">
+                    <div class="row p-2">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-9">
+                            <input type="text" placeholder="Link para vídeo" class="w-100" id="inputPublicacaoVideo">
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-sm-2 col-2">
+                            <button id="btnPublicarVideo" class="text-white btn-publicar">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mt-3 ">
+            <div class="col-lg-9 mt-3 ms-auto me-auto bg-white div-titulo-pub">
+                <h4>Publicações</h4>
+            </div>
+        </div>
+
+        <div class="container mt-3" id="containerPublicarFoto"></div>
+
+        <section id="publicacoes">
+
+            <div class="container mt-3" id="publicacao1">
+
+                <div class="col-lg-9 ms-auto me-auto bg-white publicacao">
+                    <div class="d-flex">
+                        <div class="col-lg-1 col-md-1 col-2">
+                            <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-3 ms-2">
+                            <span class="fw-bold">rony_weasley</span><br>
+                            <span>15h - <i class="bi bi-globe-americas-fill"></i></span>
+                        </div>
+                    </div>
+
+                    <h4 class="mt-3">Treino de quadribol hoje rendeu.</h4>
+
+                    <hr>
+
+                    <div class="d-flex">
+                        <div class="reacoes">
+                            <i class="bi bi-hand-thumbs-up-fill bg-primary rounded-circle text-white px-2 py-1"></i>
+                            <i class="bi bi-heart-fill rounded-circle text-white ms-1 px-2 py-1"></i>
+                        </div>
+
+                        <span class="ms-1 d-flex align-items-center" id="qtdeCurtidas1">21</span>
+
+                        <div class="ms-auto">
+                            <span id="qtdeComentarios1">3</span><i class="bi bi-chat-fill ms-1"></i>
+                            <span id="qtdeCompartilhamentos1">2</span><i class="bi bi-send-fill ms-2"></i>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <button class="w-100 btnInteragir p-1 curtir" id="btnCurtir1">
+                                <i class="bi bi-hand-thumbs-up"></i><span class="ms-1">Curtir</span>
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button class="w-100 btnInteragir p-1" id="btnComentar1">
+                                <i class="bi bi-chat"></i><span class="ms-1">Comentar</span>
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button class="w-100 btnInteragir p-1" id="btnCompartilhar1">
+                                <i class="bi bi-send"></i><span class="ms-1">Compartilhar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <span class="fw-bold">Comentários</span>
+
+                    <section id="secaoComentarios1">
+                        <div class="row mt-3">
+                            <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                                <img src="./imagens/Finnigan-perfil.jpg" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-lg-11 col-md-11 col-10">
+                                <div class="comentario">
+                                    <span class="fw-bold">finnigan.</span><br>
+                                    <span>Jogou muito Rony</span><br>
+                                </div>
+
+                                <div class="d-flex">
+                                    <span>17h</span>
+                                    <button class="btnCurtirComentario btnCurtirComentario1 ms-2">Curtir</button>
+                                    <button class="btnResponderComentario ms-2 ">Responder</button>
+
+                                    <span class="ms-auto me-4"><span class="qtdeCurtidasComentario1">1</span>
+                                        curtida(s)</span>
+                                </div>
+
+                                <button class="fw-bold mt-2 btnRespostaComentario">1 resposta</button>
+
+                                <div class="row divRespostaComentarioOculta" id="divRespostaComentario2">
+                                    <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                                        <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+                                        <span class="fw-bold">rony_weasley</span><br>
+                                        <span>Valeu, tmj</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <button class="btnMostrarComentarios mt-3 fw-bold">Ver todos os comentários</button>
+
+
+                    <div class="row align-items-center mt-2  linhaComentarOculta" id="linhaComentarPub1">
+                        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                            <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="col-lg-8 col-md-9 col-sm-7 col-6">
+                            <input type="text" name="" placeholder="Comentar como Rony Weasley" class="w-100 rounded"
+                                id="inputComentarPub1">
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-sm-1 col-1">
+                            <button id="btnPublicarComentario1" class="btnPublicarComentario">Comentar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="col-lg-9 ms-auto me-auto publicacao bg-white">
+                    <div class="d-flex">
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-2">
+                            <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-3 ms-2">
+                            <span class="fw-bold">rony_weasley</span><br>
+                            20h - <i class="bi bi-globe-americas-fill"></i>
+                        </div>
+                    </div>
+
+                    <p>Aula de bicho papão</p>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                            <img src="./imagens/Captura de tela 2025-10-25 143040.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                            <img src="./imagens/Captura de tela 2025-10-25 143056.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-2">
+                        <i class="bi bi-hand-thumbs-up-fill bg-primary rounded-circle text-white px-2 py-1"></i>
+                        <i class="bi bi-heart-fill rounded-circle text-white ms-1 px-2 py-1"></i>
+                        <span class="ms-1 d-flex align-items-center qtdeCurtidas" id="qtdeCurtidas2">79</span>
+
+                        <div class="ms-auto">
+                            <span id="qtdeComentarios2">12</span><i class="bi bi-chat-fill ms-1"></i>
+                            <span id="qtdeCompartilhamentos2">9</span><i class="bi bi-send-fill ms-2"></i>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <button class="w-100 btnInteragir p-1 curtir" id="btnCurtir2">
+                                <i class="bi bi-hand-thumbs-up"></i><span class="ms-1">Curtir</span>
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button class="w-100 btnInteragir p-1" id="btnComentar2">
+                                <i class="bi bi-chat"></i><span class="ms-1">Comentar</span>
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button class="w-100 btnInteragir p-1" id="btnCompartilhar2">
+                                <i class="bi bi-send"></i><span class="ms-1">Compartilhar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <span class="fw-bold">Comentários</span>
+
+                    <section id="secaoComentarios2">
+
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                                <img src="./imagens/Harry.jpg" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-lg-11 col-md-11 col-sm-10 col-10">
+                                <div class="comentario">
+                                    <span class="fw-bold">harry_ptt</span><br>
+                                    <span>A melhor parte foi a aranha ganhando patins kkkkk</span><br>
+                                </div>
+                                <div class="d-flex">
+                                    <span>15h</span>
+                                    <button class="btnCurtirComentario ms-2 btnCurtirComentario2">Curtir</button>
+                                    <button class="btnResponderComentario ms-2"
+                                        id="btnResponderComentario2">Responder</button>
+
+                                    <span class="ms-auto me-3"><span class="qtdeCurtidasComentario2">3</span>
+                                        curtidas</span>
+                                </div>
+                                <button class="fw-bold mt-2 btnRespostaComentario" id="btnRespostaComentario2">1
+                                    resposta</button>
+
+                                <div class="row divRespostaComentarioOculta">
+                                    <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                                        <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-9 col-9">
+                                        <span class="fw-bold">rony_weasley</span>
+                                        <br>
+                                        <span>Sim KKKKKK</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row mt-3">
+                            <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                                <img src="./imagens/Finnigan-perfil.jpg" alt="" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-lg-11 col-md-11 col-sm-10 col-10">
+                                <div class="comentario">
+                                    <span class="fw-bold">finnigan.</span><br>
+                                    <span>O melhor bicho papão foi o do Neville</span><br>
+                                </div>
+
+                                <div class="d-flex">
+                                    <span>17h</span>
+                                    <button class="btnCurtirComentario ms-2 btnCurtirComentario2">Curtir</button>
+                                    <button class="btnResponderComentario ms-2 ">Responder</button>
+
+                                    <span class="ms-auto me-3"><span class="qtdeCurtidasComentario2">2</span>
+                                        curtidas</span>
+                                </div>
+
+                                <button class="fw-bold mt-2 btnRespostaComentario">1 resposta</button>
+
+                                <div class="row divRespostaComentarioOculta" id="divRespostaComentario2">
+                                    <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                                        <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-9 col-9">
+                                        <span class="fw-bold">rony_weasley</span><br>
+                                        <span>Real</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <button class="btnMostrarComentarios mt-3 fw-bold">Ver todos os comentários</button>
+
+
+                    <div class="row align-items-center mt-2 linhaComentar linhaComentarOculta" id="linhaComentarPub2">
+                        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                            <img src="./imagens/Rony Weasley.jpeg" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="col-lg-8 col-md-9 col-sm-7 col-6">
+                            <input type="text" name="" placeholder="Comentar como Rony Weasley"
+                                class="w-100 rounded inputComentarPub" id="inputComentarPub2">
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-sm-1 col-1">
+                            <button class="btnPublicarComentario" id="btnPublicarComentario2">Comentar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

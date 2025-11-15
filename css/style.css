@@ -1,0 +1,271 @@
+body {
+    display: grid;
+}
+
+@media (max-width: 1023px) {
+     nav {
+        background-color: rgb(0, 5, 147);
+    }
+    aside {
+        display: none;
+    }
+}
+
+@media (min-width: 1023px) {
+    body {
+        grid-template-columns: 300px 1fr;
+    }
+
+    header {
+        grid-column: 2/3;
+    }
+
+    main {
+        grid-column: 2/3;
+    }
+
+
+    aside {
+        grid-column: 1/2;
+        background-color: rgb(0, 174, 255);
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        border-right: 3px solid rgb(0, 10, 73);
+    } 
+
+    .lista-aside li:hover {
+        background-color: rgb(0, 135, 198);
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+    }
+
+    nav {
+        grid-column: 2/3;
+        background-color: rgb(0, 5, 147);
+    }
+
+    .bi-hand-thumbs-up-fill, .bi-heart-fill {
+        font-size: 13px;
+    }
+
+    .div-foto-perfil {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+/* NAV */
+#btnEntrar {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    padding: 6px;
+    text-decoration: none;
+}
+
+#btnCadastrar {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 100, 187);
+    color: white;
+    padding: 6px;
+    text-decoration: none;
+}
+
+#btnEntrar:hover {
+    background-color: rgb(0, 112, 209);
+}
+
+#btnCadastrar:hover {
+    background-color: rgb(0, 88, 164)
+}
+
+/* PERFIL */
+#btnSeguir {
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.seguir {
+    background-color: rgb(0, 94, 255);
+}
+
+.seguindo {
+    background-color: gray;
+}
+
+#btnSugestao {
+    border: none;
+    background-color: rgb(175, 175, 175);
+    border-radius: 10px;
+}
+
+/* SUGESTÕES */
+.sugestoesOcultas {
+    display: none;
+}
+
+.sugestoesExibidas {
+    display: block;
+}
+
+.pessoa-sugestao {
+    border: 1px solid black;
+}
+
+.btnSeguirSugestao {
+    border: none;
+    background: none;
+    color: rgb(0, 94, 255);
+}
+
+/* CARROSSEL */
+.imgCarrossel {
+    border-radius: 10px;
+}
+
+.btn-publicar {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(13, 110, 253);
+}
+
+.btn-publicar:hover {
+    background-color: rgb(0, 96, 240);
+}
+
+
+/* MAIN */
+main {
+    background-color: rgb(238, 238, 238);
+}
+
+/* PUBLICAR */
+.div-publicar {
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgb(172, 172, 172);
+    padding: 10px;
+}
+
+#labelFoto, #labelVideo {
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#labelFoto:hover, #labelVideo:hover {
+    background-color: rgba(0, 0, 213, 0.833);
+}
+
+/* PUBLICAÇÕES */
+.div-titulo-pub {
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgb(172, 172, 172);
+    padding: 10px;
+}
+
+.publicacao {
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgb(172, 172, 172);
+    padding: 20px;
+}
+
+.bi-heart-fill {
+    background-color: red;
+}
+
+.btnInteragir {
+    border: none;
+    background: none;
+    height: 100%;
+}
+
+.btnInteragir:hover {
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+}
+
+.curtir {
+    color: black;
+    height: 100%;
+}
+
+.curtido {
+    color: blue;
+    font-weight: bold;
+}
+
+/* COMENTÁRIOS */
+.comentario {
+    background-color: rgb(227, 225, 225);
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.comentario-clicado {
+    font-weight: bold;
+}
+
+.btnCurtirComentario, .btnResponderComentario {
+    border: none;
+    background: none;
+}
+
+.comentario-curtido {
+    color: blue;
+    font-weight: bold;
+}
+
+.btnRespostaComentario {
+    border: none;
+    background: none;
+}
+
+.divRespostaComentarioOculta {
+    display: none;
+}
+
+.divRespostaComentarioExibida {
+    display: flex;
+    background-color: rgb(227, 225, 225);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.btnMostrarComentarios {
+    border: none;
+    background: none;
+}
+
+.linhaComentarOculta {
+    display: none;
+}
+
+.linhaComentarExibida {
+    display: flex;
+}
+
+.btnComentarClicado {
+    font-weight: bold;
+}
+
+.inputComentarPub {
+    border-radius: 5px;
+}
+
+.btnPublicarComentario {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 98, 255);
+    color: white;
+    padding: 4px;
+}
+
+.btnPublicarComentario:hover {
+    background-color: rgb(0, 87, 228);
+}
