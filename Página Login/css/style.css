@@ -1,0 +1,81 @@
+body {
+  background: linear-gradient(to top, rgba(15, 81, 185), rgba(17, 109, 189), rgba(12, 163, 201), rgba(9, 181, 186), rgba(5, 234, 205));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.div-login {
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 1px 1px 5px rgb(72, 72, 72);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.div-login h2 {
+  margin-bottom: 8px;
+  font-size: 24px;
+  color: #333;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.div-input {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.div-input label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.div-input input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.div-senha {
+  position: relative;
+}
+
+.div-senha input {
+  padding-right: 40px;
+}
+
+.mostrar-senha {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #444, #000);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(to right, #333, #000);
+}
